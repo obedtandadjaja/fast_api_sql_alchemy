@@ -16,3 +16,21 @@ In trying to find out these things, I will be creating a simple web server with 
 ```
 make start
 ```
+
+## Project Structure
+
+root
+  - alembic
+  - app
+    - api
+      - utils (common utility that is shared across multiple versions)
+      - v1
+        - utils (utilitiy shared only on this v1 api)
+        - endpoint.py
+        - endpoint2.py
+      - v2
+    - controllers (mimics the structure of api)
+    - db
+    - lib (shared utility among controllers and models)
+    - models
+  - tests (mimics the structure of app)
