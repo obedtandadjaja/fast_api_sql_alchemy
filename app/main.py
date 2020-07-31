@@ -53,8 +53,3 @@ async def add_process_time_header(request: Request, call_next):
     return response
 
 app.include_router(root.router, prefix='/api', tags=['api'])
-
-# dummy API for GET method
-@app.get('/items/{item_id}')
-async def read_item(item_id: int, q: Optional[str] = None):
-    return {'item_id': item_id, 'q': q}
